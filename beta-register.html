@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Register interest in the US30 Copilot Beta from ForgeLogic Technologies Ltd.">
+<title>US30 Copilot Beta Registration | ForgeLogic</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="index.html"><span class="mark">F</span><span>FORGELOGIC</span></a>
+  <nav><a href="us30-copilot.html">US30 Copilot</a><a href="risk.html">Risk</a><a href="index.html#contact">Contact</a></nav>
+</header>
+
+<main>
+<section class="beta-register-hero">
+  <div>
+    <p class="eyebrow">US30 COPILOT · BETA ACCESS</p>
+    <h1>Register for Beta access.</h1>
+    <p class="lead">US30 Copilot is a structured market-analysis and decision-support platform. Register your interest below and review the Beta requirements before access is offered.</p>
+  </div>
+  <div class="beta-price-panel">
+    <span class="tag">BETA</span>
+    <div class="beta-price">£29.99 <small>/ month</small></div>
+    <p>ForgeLogic software subscription only.</p>
+    <strong>Third-party services and market-data charges are separate.</strong>
+  </div>
+</section>
+
+<section class="section beta-steps">
+  <p class="eyebrow">BEFORE YOU REGISTER</p>
+  <h2>Know exactly what the Beta requires.</h2>
+  <div class="requirement-grid">
+    <article><b>01</b><h3>TradingView</h3><p>Compatible TradingView access is required for the technical-data workflow.</p></article>
+    <article><b>02</b><h3>FRED</h3><p>FRED macroeconomic data can be connected using the customer's own API access where required.</p></article>
+    <article><b>03</b><h3>Databento</h3><p>Databento/YM L1 confirmation is optional where supported and requires the customer's own compatible access.</p></article>
+    <article><b>04</b><h3>You remain in control</h3><p>Copilot does not connect to your broker, execute orders, hold client money or determine position size.</p></article>
+  </div>
+</section>
+
+<section class="section beta-register-layout">
+  <div class="register-copy">
+    <p class="eyebrow">BETA REGISTRATION</p>
+    <h2>Join the access list.</h2>
+    <p>This stage records interest only. It does not charge you or create a paid subscription.</p>
+    <div class="process-list">
+      <div><span>1</span><p><strong>Register interest</strong><br>Tell ForgeLogic you want Beta access.</p></div>
+      <div><span>2</span><p><strong>Eligibility &amp; onboarding</strong><br>Review the product requirements, risk information and setup.</p></div>
+      <div><span>3</span><p><strong>Terms before payment</strong><br>Subscription terms, risk disclosure and third-party costs are shown before a paid subscription begins.</p></div>
+      <div><span>4</span><p><strong>Activate Copilot</strong><br>Once approved and configured, access can be provisioned to your account.</p></div>
+    </div>
+  </div>
+
+  <form class="beta-form" action="mailto:contact@forgelogic-tech.co.uk" method="post" enctype="text/plain">
+    <label>Full name<input name="Full name" type="text" required autocomplete="name"></label>
+    <label>Email address<input name="Email" type="email" required autocomplete="email"></label>
+    <label>Trading experience
+      <select name="Trading experience" required>
+        <option value="">Select</option>
+        <option>Less than 1 year</option>
+        <option>1–3 years</option>
+        <option>3–5 years</option>
+        <option>5+ years</option>
+      </select>
+    </label>
+    <label>Do you currently use TradingView?
+      <select name="TradingView" required>
+        <option value="">Select</option><option>Yes</option><option>No</option>
+      </select>
+    </label>
+    <label>What are you primarily interested in?
+      <select name="Primary use" required>
+        <option value="">Select</option>
+        <option>Intraday analysis</option>
+        <option>Scalping / shorter-term analysis</option>
+        <option>Swing analysis</option>
+        <option>General US30 market analysis</option>
+      </select>
+    </label>
+
+    <label class="check"><input type="checkbox" required> <span>I understand that US30 Copilot is decision-support software and does not execute trades or make trading decisions for me.</span></label>
+    <label class="check"><input type="checkbox" required> <span>I understand that the £29.99 Beta price covers ForgeLogic software only and compatible third-party services/data may carry separate charges.</span></label>
+    <label class="check"><input type="checkbox" required> <span>I have read the <a href="risk.html" target="_blank">Risk Disclosure</a> and understand that trading speculative or leveraged products involves substantial risk of loss.</span></label>
+    <label class="check"><input type="checkbox" required> <span>I agree that ForgeLogic may contact me about US30 Copilot Beta access and onboarding. See our <a href="privacy.html" target="_blank">Privacy Policy</a>.</span></label>
+
+    <button class="button primary beta-submit" type="submit">Register Beta Interest</button>
+    <p class="form-note">No payment is taken on this page.</p>
+  </form>
+</section>
+
+<section class="section legal-note">
+  <h3>Important</h3>
+  <p>Registration does not guarantee access. US30 Copilot remains a Beta product and functionality may change during development and testing. ForgeLogic does not guarantee profits, win rates, accuracy, returns or avoidance of loss.</p>
+  <div class="legal-links-inline"><a href="risk.html">Risk Disclosure</a><a href="subscription.html">Subscription &amp; Cancellation</a><a href="data-disclosure.html">Third-Party Data Disclosure</a><a href="privacy.html">Privacy</a></div>
+</section>
+</main>
+
+<footer>
+<div><strong>FORGELOGIC</strong><br><small>ForgeLogic Technologies Ltd · United Kingdom</small></div>
+<div class="footer-links"><a href="index.html">Home</a><a href="us30-copilot.html">US30 Copilot</a><a href="terms.html">Website Terms</a></div>
+<small>© <span id="year"></span> ForgeLogic Technologies Ltd. All rights reserved.</small>
+</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>
