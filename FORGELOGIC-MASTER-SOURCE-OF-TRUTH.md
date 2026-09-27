@@ -1,7 +1,7 @@
 # FORGELOGIC — MASTER SOURCE OF TRUTH
 
 **Authority:** This file is the canonical project-control record for ForgeLogic / US30 Copilot.  
-**Last reconciled:** 26 September 2026  
+**Last reconciled:** 27 September 2026  
 **Rule:** If chat recollection conflicts with this file, verify the live system and update this file. Do not silently revive superseded decisions.
 
 ---
@@ -37,6 +37,16 @@
 - Repository: `mattjprice01-bot/forgelogic-website`.
 - `main` is the protected production website baseline.
 - Existing customer-facing pages/configuration must remain intact until the replacement candidate passes testing.
+
+### DNS / domain checkpoint — 27 September 2026
+- Railway project `ForgeLogic-website`, production service `forgelogic-website`, currently has both custom domains attached: `forgelogic-tech.co.uk` and `www.forgelogic-tech.co.uk`.
+- Railway service domain remains `forgelogic-website-production.up.railway.app`; service target port is **8080**.
+- GoDaddy `www.forgelogic-tech.co.uk` is configured toward the Railway website target.
+- Because GoDaddy would not accept the requested root `CNAME @` arrangement and the root also carries Microsoft 365/mail-related DNS records, the chosen root-domain solution is **GoDaddy permanent 301 domain forwarding** from `forgelogic-tech.co.uk` to `https://www.forgelogic-tech.co.uk` rather than forcing a root CNAME.
+- The Railway TXT verification record for ForgeLogic was updated during the DNS work.
+- During this work, `us30copilot.com` was accidentally edited while the wrong GoDaddy domain was selected. The affected `www` CNAME was restored to `us30copilot.com`, the affected Railway verification TXT was restored to its original value, and Railway subsequently showed the required `app.us30copilot.com` DNS records healthy/green. **Leave US30 Copilot DNS alone unless a verified fault requires a change.**
+- At the final live check on 27 September, the ForgeLogic public domains were **not yet active/resolving as intended**. Treat this as DNS/forwarding propagation pending, not as confirmed completion.
+- Do not make further speculative DNS changes while propagation is pending. Recheck public `www` reachability and bare-domain 301 forwarding; if still unavailable after propagation time, diagnose the live DNS records before editing anything.
 
 ### Replit visual redesign
 - Replit project: `RedLustrousChemistry`.
@@ -121,6 +131,13 @@
 
 ## 7. NEXT ACTIONS
 
+### Immediate infrastructure check
+**DNS-01 — Recheck ForgeLogic public-domain propagation.**
+- Confirm `www.forgelogic-tech.co.uk` reaches the Railway ForgeLogic website over HTTPS.
+- Confirm bare `forgelogic-tech.co.uk` performs the intended permanent 301 redirect to `https://www.forgelogic-tech.co.uk`.
+- If either fails after reasonable propagation time, inspect live DNS/forwarding state before making any further GoDaddy changes.
+- Keep `us30copilot.com` / `app.us30copilot.com` untouched unless a verified issue appears.
+
 ### Next active engineering action
 **WEBSITE-01 — Prove the portable Replit visual candidate builds cleanly.**
 - Use GitHub Actions, Railway, Replit or a suitable local environment that can complete dependency installation.
@@ -186,6 +203,12 @@
 - Email/customer journey testing deferred until website integration so the whole customer flow can be tested in one controlled pass.
 - RC1.1 Shadow evidence review scheduled for Friday 2 October 2026.
 - Established this Master Source of Truth as the canonical project-control record.
+
+### 27 September 2026
+- Verified Railway ForgeLogic production service has both `forgelogic-tech.co.uk` and `www.forgelogic-tech.co.uk` attached on port 8080.
+- Chose GoDaddy permanent 301 forwarding for the bare ForgeLogic domain to the `www` HTTPS address rather than forcing a root CNAME that GoDaddy rejected and that could conflict with existing root mail/Microsoft 365 records.
+- Corrected accidental edits made to `us30copilot.com` while the wrong GoDaddy domain was selected; restored US30 `www` and Railway verification state, then observed `app.us30copilot.com` DNS healthy in Railway.
+- ForgeLogic public-domain activation remained pending at final check; no further speculative DNS edits until propagation is rechecked.
 
 ---
 
