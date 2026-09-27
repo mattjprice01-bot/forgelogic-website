@@ -31,3 +31,11 @@ jobs:
 
       - name: Build ForgeLogic prototype
         run: npm run build
+
+      - name: Upload isolated preview build
+        uses: actions/upload-artifact@v4
+        with:
+          name: forgelogic-replit-preview
+          path: replit-prototype/dist
+          if-no-files-found: error
+          retention-days: 7
