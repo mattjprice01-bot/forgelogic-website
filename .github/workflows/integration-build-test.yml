@@ -1,0 +1,47 @@
+name: ForgeLogic Integration Build Test
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - forgelogic-integrated-2026-09-27
+    paths:
+      - "replit-prototype/**"
+      - ".github/workflows/integration-build-test.yml"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "replit-prototype/**"
+      - ".github/workflows/integration-build-test.yml"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: replit-prototype
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build ForgeLogic integrated prototype
+        run: npm run build
+
+      - name: Upload integration preview build
+        uses: actions/upload-artifact@v4
+        with:
+          name: forgelogic-integration-preview
+          path: replit-prototype/dist
+          if-no-files-found: error
+          retention-days: 7
