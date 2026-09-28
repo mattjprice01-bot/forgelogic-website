@@ -204,6 +204,19 @@
 - RC1.1 Shadow evidence review scheduled for Friday 2 October 2026.
 - Established this Master Source of Truth as the canonical project-control record.
 
+### 28 September 2026
+- Built and released the RC1 Analytics commercial presentation layer from the isolated `rc1-analytics-release` branch in `mattjprice01-bot/US30-COPILOT-BETA-RC1`.
+- RC1 Analytics changes were presentation-only: internal scoring, LONG/SHORT calculations, continuous validation/learning, TradingView/Databento ingestion and engine logic were preserved.
+- Customer-facing terminology now uses bullish/bearish analytical bias, qualified/high-conviction conditions, model reference/invalidation/objective levels, analytical notifications and explicit manual-position tracking language.
+- RC1 Analytics was merged to `main` as commit `7280398c678c36f0a2f1c4078c103840950a6ff4`.
+- Verified the correct Railway RC1 production service is `co-pilot-6.4` in project `Co - pilot 6.4`, sourced from `mattjprice01-bot/US30-COPILOT-BETA-RC1` branch `main`, serving `app.us30copilot.com`.
+- Railway deployment `642896af-0be0-4af2-a954-1dfd9014cee7` completed SUCCESS on the RC1 Analytics commit; container startup completed and `/health` returned HTTP 200.
+- Confirmed `forgelogic-beta-api` is a separate Railway service/repository and must not be mistaken for the RC1 application deployment target.
+- Updated the ForgeLogic public website to align US30 wording with RC1 Analytics and added future-release roadmap cards for **V8 Swing Edition**, **ForgeLogic Gold**, **ForgeLogic Silver**, and **ForgeLogic Oil**. These are described as future/planned releases with specifications and availability to be announced.
+- Website changes were merged to `mattjprice01-bot/forgelogic-website` `main` as commit `2a33855956a340c5b007165d2c040a8dc6a87e53`.
+- Railway website deployment `90fe2677-71e1-4af1-b830-3276dc7d205c` completed SUCCESS and is the active production deployment for `forgelogic-tech.co.uk` / `www.forgelogic-tech.co.uk`.
+- User reviewed the live RC1 Analytics application and confirmed it looked good.
+
 ### 27 September 2026
 - Verified Railway ForgeLogic production service has both `forgelogic-tech.co.uk` and `www.forgelogic-tech.co.uk` attached on port 8080.
 - Chose GoDaddy permanent 301 forwarding for the bare ForgeLogic domain to the `www` HTTPS address rather than forcing a root CNAME that GoDaddy rejected and that could conflict with existing root mail/Microsoft 365 records.
