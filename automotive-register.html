@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Create your ForgeLogic Automotive AI Assistant account.">
+<title>Create an Automotive AI Assistant account | ForgeLogic</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.register-wrap{max-width:1000px;margin:65px auto;padding:0 20px 90px;display:grid;grid-template-columns:1fr 1fr;gap:45px}
+.register-panel{background:#101f2c;border:1px solid #2c5161;border-radius:16px;padding:28px}
+.register-panel form{display:grid;gap:16px}.register-panel label{display:grid;gap:7px;font-weight:600}
+.register-panel input{width:100%;padding:13px;border-radius:8px;border:1px solid #567482;background:#071824;color:#fff;font-size:16px}
+.register-panel .button{cursor:pointer}.hint{font-size:13px;opacity:.85;line-height:1.6}
+@media(max-width:740px){.register-wrap{grid-template-columns:1fr;margin-top:32px}}
+</style>
+</head><body>
+<header class="nav"><a class="brand" href="index.html"><span class="mark">F</span><span>FORGELOGIC</span></a>
+<nav><a href="index.html#diagnostic-copilot">Automotive AI Assistant</a><a href="https://auto.forgelogic-tech.co.uk/sign-in">Existing account: Sign in</a></nav></header>
+<main class="register-wrap">
+<section><p class="eyebrow">FORGELOGIC · AUTOMOTIVE AI</p>
+<h1>Your car. Your questions. Clear answers.</h1>
+<p class="lead">Create an account for the Automotive AI Assistant, then return directly to your vehicle guide.</p>
+<p>Use your vehicle registration, get step-by-step guidance, and ask for help with photos as you work.</p>
+<p class="hint">Accounts can be created without payment. AI usage is currently restricted to approved testers while subscriptions are being prepared. This is not registration for US30 trading.</p>
+<p><a href="https://auto.forgelogic-tech.co.uk/sign-in">Already registered? Sign in to the assistant →</a></p>
+</section>
+<section class="register-panel">
+<h2>Create your account</h2>
+<form id="automotiveRegister" method="post" action="https://auto.forgelogic-tech.co.uk/api/auth/register-website">
+<label>Name<input name="display_name" type="text" autocomplete="name" maxlength="120" required></label>
+<label>Email address<input name="email" type="email" autocomplete="email" maxlength="254" required></label>
+<label>Password<input name="password" id="password" type="password" autocomplete="new-password" minlength="10" maxlength="1024" required></label>
+<label>Confirm password<input id="confirmPassword" type="password" autocomplete="new-password" minlength="10" maxlength="1024" required></label>
+<p id="formMessage" role="status" class="hint"></p>
+<button class="button primary" type="submit">Create account &amp; open assistant</button>
+</form>
+<p class="hint">Your details are submitted securely to the ForgeLogic account service. No card details or payment are collected here.</p>
+</section>
+</main><footer><div><strong>FORGELOGIC</strong><br><small>ForgeLogic Technologies Ltd</small></div><div class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></footer>
+<script>
+document.getElementById('automotiveRegister').addEventListener('submit',event=>{
+ const password=document.getElementById('password').value;
+ if(password!==document.getElementById('confirmPassword').value){
+   event.preventDefault();document.getElementById('formMessage').textContent='Passwords do not match.';
+ }else{document.getElementById('formMessage').textContent='Creating your account…';}
+});
+</script></body></html>
