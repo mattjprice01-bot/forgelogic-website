@@ -30,7 +30,8 @@
 @media(max-width:560px){.requirement-grid{grid-template-columns:1fr}.beta-register-hero{padding-top:65px}.beta-register-hero h1{font-size:48px}}
 
 /* Automotive AI introduction: click-to-play, responsive native video. */
-.automotive-demo{margin:24px 0 16px}
+#diagnostic-copilot{min-width:0}
+.automotive-demo{margin:24px 0 16px;min-width:0;max-width:100%}
 .automotive-demo video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#080b0f;border:1px solid var(--line);border-radius:10px}
 .automotive-demo figcaption{margin-top:10px;color:var(--muted);font-size:14px}
 .automotive-transcript{margin:0 0 20px}
