@@ -55,3 +55,12 @@ Stripe's API connection can read payments, but did not expose the customer-recei
 
 ## Next session
 Read this checkpoint first. Ask for friends' results; verify automatic receipt delivery, cancellation and disposable-account deletion; implement the missing subscription confirmation; resolve findings before starting a small advertising trial. Older notes saying billing is disabled or production is only a placeholder are historical.
+
+## Closing update: domain and next-session social creative
+- Live app domain auto.forgelogic-tech.co.uk: Railway independently reported verified ownership, propagated CNAME to the production app, and a valid HTTPS certificate. Public /conversation and /api/readyz returned HTTP 200; readyz reported status ok. Raw DNS resolution in scratch failed, so DNS propagation was verified via Railway rather than claiming a successful local DNS lookup.
+- Matt deferred cancellation and account-deletion tests until the next session, after allowing the live system to sit for approximately 24 hours. No reminder or automatic test was scheduled.
+- Keep the approved 30-second advert for the website.
+- Next creative task: make more exciting, shorter TikTok/social cuts for everyday car owners. Matt specifically requested shorter runtime because viewers scroll away.
+- Proposed starting brief: 10–15 seconds, vertical 9:16; hook in the first 1–2 seconds; one simple maintenance question per clip; large readable captions, quick cuts, energetic music and natural delivery; show real app help and finish with a brief clear call to action.
+- Prepare a few hook variations to compare, rather than assuming one length or creative will perform best. Stay with ordinary people, casual clothes and their own cars; avoid workshop/overalls framing and unsupported savings or guaranteed repair claims.
+- Social cuts are planned, not produced or published. Advertising spend remains unstarted; acceptance checks still come first.
