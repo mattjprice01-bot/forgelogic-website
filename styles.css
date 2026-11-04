@@ -28,3 +28,11 @@
 .beta-form{display:grid;gap:17px;padding:30px;border:1px solid #26465b;border-radius:18px;background:#0c141c}.beta-form label{display:grid;gap:8px;font-size:13px;font-weight:800;color:#b9c6d1}.beta-form input,.beta-form select{width:100%;padding:14px 15px;border-radius:9px;border:1px solid #2b4356;background:#071019;color:#f4f7fa;font:inherit}.beta-form select{appearance:auto}.beta-form .check{display:grid;grid-template-columns:20px 1fr;gap:10px;align-items:start;font-weight:500;line-height:1.45}.beta-form .check input{width:18px;height:18px;margin-top:2px}.beta-form .check a{color:var(--accent);text-decoration:underline}.beta-submit{cursor:pointer;font:inherit}.form-note{text-align:center;color:#7f91a2;font-size:12px;margin:0}
 @media(max-width:900px){.beta-register-hero,.beta-register-layout{grid-template-columns:1fr}.requirement-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.requirement-grid{grid-template-columns:1fr}.beta-register-hero{padding-top:65px}.beta-register-hero h1{font-size:48px}}
+
+/* Automotive AI introduction: click-to-play, responsive native video. */
+.automotive-demo{margin:24px 0 16px}
+.automotive-demo video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#080b0f;border:1px solid var(--line);border-radius:10px}
+.automotive-demo figcaption{margin-top:10px;color:var(--muted);font-size:14px}
+.automotive-transcript{margin:0 0 20px}
+.automotive-transcript summary{cursor:pointer}
+
