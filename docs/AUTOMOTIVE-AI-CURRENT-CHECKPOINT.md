@@ -1,6 +1,14 @@
 # Automotive AI Assistant — launch checkpoint
 Updated: 5 November 2026, Europe/London. This is a checkpoint summary, not a verbatim transcript.
 
+## 5 November evening handover
+
+- Production is live and selling. Stripe showed four paid initial invoices on active £9.99/month subscriptions. Matt confirmed customer receipts and subscription confirmations arrived, and verified cancellation, access cutoff and resubscription.
+- The 30-second advert is on the website. The 15-second captioned air-filter video was posted organically on TikTok and left unboosted. It had 246 organic views at the reported evening check. Saved video: ForgeLogic-Automotive-AI-15s-Vertical.mp4 (libfile_b3c6512ef66481918732ed4b549afa7f).
+- Google Ads: Matt clicked Submit and reached conversion tracking setup with “Test installation”. The setup screen referred to review before ads could go live. Tag installation, campaign delivery and actual spend remain unverified. The £70 test was discussed as a draft budget, not confirmed spend.
+- Resume by checking campaign status, billing activity and tag installation in Google Ads before enabling or boosting any paid activity. Separately, test account deletion on a disposable account and review the wording of the subscription confirmation and refund email delivery.
+- The Stripe screenshot showing both receipt switches off is the earlier setup image. Matt subsequently confirmed the switches stayed on after refresh.
+
 ## Resume here
 Matt signed off the production build and moved the project into advertising. Live billing is active at £9.99/month. Stripe showed four paid initial invoices on active subscriptions. The approved consumer advert is on the website.
 
@@ -51,7 +59,7 @@ Stripe's API connection can read payments, but did not expose the customer-recei
 - Stable checkpoint path in Git: docs/AUTOMOTIVE-AI-CURRENT-CHECKPOINT.md
 
 ## Next session
-Resume with the UK advertising test. The signed-in cancellation check is complete. Use the signup page as the campaign destination and measure paid subscriptions.
+Check Google Ads campaign status, billing and tag installation first. The signed-in cancellation check is complete. Use the signup page as the campaign destination and measure paid subscriptions once tracking is verified.
 
 ## Closing update: domain and next-session social creative
 - Live app domain auto.forgelogic-tech.co.uk: Railway independently reported verified ownership, propagated CNAME to the production app, and a valid HTTPS certificate. Public /conversation and /api/readyz returned HTTP 200; readyz reported status ok. Raw DNS resolution in scratch failed, so DNS propagation was verified via Railway rather than claiming a successful local DNS lookup.
@@ -59,4 +67,4 @@ Resume with the UK advertising test. The signed-in cancellation check is complet
 - Next creative task: make more exciting, shorter TikTok/social cuts for everyday car owners. Matt specifically requested shorter runtime because viewers scroll away.
 - Proposed starting brief: 10–15 seconds, vertical 9:16; hook in the first 1–2 seconds; one simple maintenance question per clip; large readable captions, quick cuts, energetic music and natural delivery; show real app help and finish with a brief clear call to action.
 - Prepare a few hook variations to compare, rather than assuming one length or creative will perform best. Stay with ordinary people, casual clothes and their own cars; avoid workshop/overalls framing and unsupported savings or guaranteed repair claims.
-- Social cuts are planned and have not been produced or published. Advertising spend remains unstarted.
+- The first social cut is published organically on TikTok. Paid delivery and spend are unverified.
