@@ -1,5 +1,15 @@
 # Automotive AI Assistant — launch checkpoint
-Updated: 5 November 2026, Europe/London. This is a checkpoint summary, not a verbatim transcript.
+Updated: 6 November 2026, Europe/London. This is a checkpoint summary, not a verbatim transcript.
+
+## 6 November evening handover — Gemini generation incident
+
+**Decision:** Pause incident work overnight. Keep the current Gemini model configuration in place. AI guidance recovery has not been verified.
+
+- A signed-in Ford Transit tyre-pressure request reached production. Vehicle lookup succeeded, but web research and structured guidance each exhausted their then-configured 60-second limit. The app returned HTTP 503 after approximately 120 seconds. A later signed-in retest returned to the saved job and offered Retry. Railway recorded the client connection closing after 27.8 seconds and the server reaching its then-configured 35-second AI deadline. A separate request returned 504 at 35 seconds.
+- On the latest production build, the pre-deploy check verified the Gemini key and configured model metadata. A direct native generation probe returned Google HTTP 503 in 2.1 seconds. The OpenAI-compatible generation and Google Search-grounded probes both timed out at 12 seconds. The 28 observed HTTP 401s were all on the app's sign-in check. All 32 observed subscription checks returned 200. Google DNS resolved and Railway recorded zero drops in 12 matching outbound flows. These observations identify a generation failure on our production path. They do not establish Google's internal cause or the incident's full scope. Public users reported intermittent problems on 6 November. No service-wide Gemini API outage was confirmed.
+- Latest production deployment: Railway `fad5afde-a68f-4e1b-98ce-3daa12a94277`, status SUCCESS, app commit `732562507a25038dd5e27f922c0d9352d7aee58d`. This build gives AI work a shared 24-second deadline, caps web research at 8 seconds, and logs generation probes at Railway startup. The retry message is present on the live app. These changes limit waiting and help diagnose failures. A successful signed-in AI reply remains unverified.
+- **Resume on 7 November:** Refresh the live app and resend the same Transit tyre-pressure question from a signed-in account. Confirm usable guidance reaches the screen and correlate the request with Railway logs. If it still fails, test Gemini 3.7 Flash with the existing key before moving customer traffic. Verify both grounded research and structured guidance. Gemini 3.6 Flash is the next candidate. No separate backup provider is configured.
+- **Still open:** Test account deletion with a disposable account, review subscription confirmation wording and refund email delivery, and verify Google Ads campaign status, conversion tag and billing. Keep paid promotion paused until replies are reliable. The £70 ad test was a draft budget, with spend unverified.
 
 ## 5 November evening handover
 
@@ -9,7 +19,7 @@ Updated: 5 November 2026, Europe/London. This is a checkpoint summary, not a ver
 - Resume by checking campaign status, billing activity and tag installation in Google Ads before enabling or boosting any paid activity. Separately, test account deletion on a disposable account and review the wording of the subscription confirmation and refund email delivery.
 - The Stripe screenshot showing both receipt switches off is the earlier setup image. Matt subsequently confirmed the switches stayed on after refresh.
 
-## Resume here
+## 5 November resume notes
 Matt signed off the production build and moved the project into advertising. Live billing is active at £9.99/month. Stripe showed four paid initial invoices on active subscriptions. The approved consumer advert is on the website.
 
 ## Completed and confirmed
@@ -58,7 +68,7 @@ Stripe's API connection can read payments, but did not expose the customer-recei
 - Website repository and this checkpoint: https://github.com/mattjprice01-bot/forgelogic-website
 - Stable checkpoint path in Git: docs/AUTOMOTIVE-AI-CURRENT-CHECKPOINT.md
 
-## Next session
+## 5 November next-session notes
 Check Google Ads campaign status, billing and tag installation first. The signed-in cancellation check is complete. Use the signup page as the campaign destination and measure paid subscriptions once tracking is verified.
 
 ## Closing update: domain and next-session social creative
