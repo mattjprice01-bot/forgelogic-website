@@ -1,5 +1,16 @@
 # Automotive AI Assistant — launch checkpoint
-Updated: 6 November 2026, Europe/London. This is a checkpoint summary, not a verbatim transcript.
+Updated: 9 November 2026, Europe/London. This is a checkpoint summary, not a verbatim transcript.
+
+## 9 November morning handover — registration lookup and AI guidance
+
+**Status:** Both workflows failed in signed-in production tests. Pause investigation until the evening session. Recovery is unverified.
+
+- **Registration lookup:** Sign-in and the subscription check returned 200. The Automotive AI service returned 502 on repeated lookup attempts. The configured endpoint matches the official DVSA MOT History API. A credential-free probe from a separate Windows client reached the host over TCP, then received TLS alert 112 (`unrecognized_name`) before any HTTP response. DVSA's public status page showed the API operational. The Windows result is a diagnostic lead for the production failure.
+- **AI guidance:** Reopening a saved Transit job bypassed registration lookup. At 08:04:49 UTC, the guidance request returned 503 after 12.8 seconds. Railway logged web research failure, then a provider HTTP 503 in structured guidance. DNS resolved for both providers and traffic was observed in both directions during the relevant attempts. A shared cause is unconfirmed.
+- **Production baseline:** Railway deployment `fad5afde-a68f-4e1b-98ce-3daa12a94277`, app commit `732562507a25038dd5e27f922c0d9352d7aee58d`. Morning work consisted of diagnostics and this handover.
+- **Evening restart:** Test `gemini-3.7-flash` with the existing key away from customer traffic. Verify structured guidance and Google Search grounding separately, then run a signed-in Transit task end to end before switching production. If the alternate model also returns 503, test a second provider.
+- **Lookup fallback:** Add manual year, make, model and optional engine entry to the live new-task screen, which currently requires registration confirmation. Test creating a task through manual entry with lookup unavailable. Send the endpoint, TLS alert and UTC timestamps to DVSA API support and recheck the authenticated lookup after the endpoint responds.
+- Keep paid promotion paused until signed-in guidance is reliable.
 
 ## 6 November evening handover — Gemini generation incident
 
