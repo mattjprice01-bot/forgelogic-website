@@ -1,5 +1,29 @@
 # Automotive AI Assistant — launch checkpoint
-Updated: 9 November 2026, Europe/London. This is a checkpoint summary, not a verbatim transcript.
+Updated: 10 November 2026, Europe/London. This is a checkpoint summary, not a verbatim transcript.
+
+## 10 November evening handover
+
+### Live release
+
+- Manual vehicle entry is live. Choose **No registration? Enter details**, then enter make, model and year. Engine or variant is optional. Registration lookup remains the default. Both paths use the existing job and AI research flow.
+- [Live app](https://auto.forgelogic-tech.co.uk/conversation) · [Production code commit 6dca101](https://github.com/mattjprice01-bot/Forgelogic-diagnostic-copilot/commit/6dca10115c9f92a2df99ccaee2f69a405adb3150)
+- Production branch: `feature/automotive-production-2026-11-04`. Railway deployment `ec15d2f4-e106-4ccb-bc17-6f0692989682` reached SUCCESS at 21:12 GMT. Public readiness passed and the live bundle contained both entry options. Production connection checks verified Stripe checkout was enabled. Native, compatible and Google Search-grounded Gemini startup probes returned HTTP 200 with text.
+- The release required no database schema changes. Production deployment settings, variables, billing and existing data were outside the release patch. Previous production deployment `fad5afde-a68f-4e1b-98ce-3daa12a94277`, commit `732562507a25038dd5e27f922c0d9352d7aee58d`, is the rollback reference.
+
+### Tests and recovery
+
+- Local production build, workspace type checks and 26 backend tests passed. Browser tests with simulated services covered manual entry, invalid year, retry without a duplicate vehicle, registration confirmation across a mode switch and guide initialization.
+- On [staging](https://automotive-ai-assistant-staging.up.railway.app/conversation), a mismatched allowed origin initially returned 403 at sign-in. Only staging's `APP_ORIGIN` was corrected. Staging deployment `c5daa616-f55e-4aea-a462-35306b515687` passed readiness.
+- Matt signed in and confirmed sensible guidance for the manually entered 2023 KTM 300 EXC. He then confirmed registration lookup and advice. Railway recorded HTTP 200 on both guide requests and on the registration lookup. Matt acknowledged the live rollout after production verification.
+- On 9 November, registration lookup recovered before the Google billing change. The billing warning cleared after Matt corrected the payment method and the live app generated a Transit air-filter guide. Web research failed on that earlier request. The 10 November deployment's grounded startup probe succeeded.
+
+### Adverts, payments and next checks
+
+- Matt approved the [15-second motorcycle TikTok advert](https://chatgpt.com/library?file_id=libfile_fde3_f-ece34fefdb7c8191b9060cdb5e20700d_d2f63a9cbac48191b5cb2c2099688a7e&account_id=personal) with the oil-drain shot, warmer British voiceover and sporty backing track.
+- Matt reported roughly 98,000 views on the earlier TikTok promotion, £20 spent, and no sales from it. The promotion lacked a direct website button. The 10 November Stripe check showed one unpaid checkout started and no newly paid subscriptions since promotion began. The source of that checkout is unknown.
+- Stripe is live at £9.99/month. The 9 November Stripe check showed £37.80 pending with an expected availability date of 11 November. Bank payout arrival was unverified.
+- For the next promotion, use the [direct sign-up page](https://www.forgelogic-tech.co.uk/automotive-register.html), test the link on a phone and track website clicks, checkout starts and paid subscriptions. Publication and promotion of the motorcycle cut were not verified.
+- Google Ads conversion tracking, disposable-account deletion, subscription email wording and refund-email delivery remain open from the previous handover.
 
 ## 9 November morning handover — registration lookup and AI guidance
 
