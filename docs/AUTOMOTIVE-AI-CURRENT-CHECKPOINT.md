@@ -1,5 +1,13 @@
 # Automotive AI Assistant — launch checkpoint
-Updated: 6 November 2026, Europe/London. This is a checkpoint summary, not a verbatim transcript.
+Updated: 17 November 2026, Europe/London. This is a checkpoint summary, not a verbatim transcript.
+
+## 17 November advertising handover
+
+- Matt approved the revised A5 parts-counter flyer. It uses a cream background, ForgeLogic-style circuit artwork and the headline “Bought the part? Fit it yourself.” The copy covers DIY help for cars and motorbikes, including bulbs, filters, wipers, oil changes, spark plugs and fault-finding. The QR points to signup with parts-counter campaign tags. Print and scan one copy before placing flyers at Pro-Service and local parts suppliers around Banwell.
+- Approved flyer assets: `ForgeLogic-Parts-Counter-Flyer-Rev4.pdf` and `ForgeLogic-Parts-Counter-Flyer-Rev4.png`. Library file IDs: PDF `libfile_fde3_f-cd8646d48f308191a4ebf62d8bf92ac1_d2f63a9cbac48191b5cb2c2099688a7e`, PNG `libfile_fde3_f-f3018b71b5948191b2cbdc16f101b119_d2f63a9cbac48191b5cb2c2099688a7e`, both version 2.
+- `ForgeLogic-10s-Parts-Advert.mp4` is a 10-second vertical animated ad for TikTok and Facebook Reels. ChatGPT playback links failed for Matt on his phone. The MP4 was emailed as an attachment to his Gmail under “ForgeLogic 10-second advert.” Publication was not confirmed. Library file ID: `libfile_fde3_f-db3cec4687bc8191b4776f3b8866fbe6_d2f63a9cbac48191b5cb2c2099688a7e`.
+- Next creative: film real short demos with Matt and Natalie. Show one job per clip, the question asked in the app and the finished result.
+- Next launch checks: verify Facebook page visibility and test separate tracked signup links from Facebook and TikTok on a phone. Before paid spend, verify usable guidance in a signed-in production session, Google Ads status and billing, and exactly one conversion per completed subscription. Then test local Search around Banwell and measure cost per paid subscriber. No paid campaign checks or spend were verified in this session.
 
 ## 6 November evening handover — Gemini generation incident
 
